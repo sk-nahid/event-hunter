@@ -1,0 +1,63 @@
+[
+    {
+      "id": "event_001",
+      "name": "Tech Innovators Conference 2025",
+      "thumbnail": "https://i.ibb.co.com/h1BwgkBq/evangeline-shaw-nw-LTVwb7-Db-U-unsplash.jpg",
+      "category": "Technology",
+      "date": "2025-05-15",
+      "location": "Dhaka Convention Center, Dhaka",
+      "entry_fee": 500,
+      "description": "An exclusive gathering of tech leaders and innovators from around the globe."
+    },
+    {
+      "id": "event_002",
+      "name": "Future of Web Development Summit",
+      "thumbnail": "https://i.ibb.co.com/XfxWX5qC/headway-F2-KRf-Qf-Cqw-unsplash.jpg",
+      "category": "Web Development",
+      "date": "2025-06-10",
+      "location": "Bangabandhu International Conference Center, Dhaka",
+      "entry_fee": 300,
+      "description": "Explore cutting-edge trends and tools shaping the future of web development."
+    },
+    {
+      "id": "event_003",
+      "name": "AI & Machine Learning Expo 2025",
+      "thumbnail": "https://i.ibb.co.com/TBSt7c01/herlambang-tinasih-gusti-r-TVN-Igb-C0o-unsplash.jpg",
+      "category": "Artificial Intelligence",
+      "date": "2025-07-01",
+      "location": "AI Research Lab, Dhaka",
+      "entry_fee": 750,
+      "description": "A showcase of AI breakthroughs, research, and industrial applications."
+    },
+    {
+      "id": "event_004",
+      "name": "Startup Dhaka 2025",
+      "thumbnail": "https://i.ibb.co.com/0VY7gWf1/jakob-dalbjorn-cu-KJre3ny-Yc-unsplash.jpg",
+      "category": "Entrepreneurship",
+      "date": "2025-08-12",
+      "location": "Startup Incubator Center, Dhaka",
+      "entry_fee": 200,
+      "description": "A platform for startups to pitch ideas and network with investors and mentors."
+    },
+    {
+      "id": "event_005",
+      "name": "Digital Security Forum",
+      "thumbnail": "https://i.ibb.co.com/N4nz8S7/m-accelerator-y-Tsy3-PYFPtc-unsplash.jpg",
+      "category": "Cybersecurity",
+      "date": "2025-09-05",
+      "location": "CyberTech Hall, Dhaka",
+      "entry_fee": 450,
+      "description": "An event focused on digital threats, secure systems, and the future of cybersecurity."
+    },
+    {
+      "id": "event_006",
+      "name": "Green Tech and Sustainability Conference",
+      "thumbnail": "https://i.ibb.co.com/8DB5H9VN/web-event.jpg",
+      "category": "Environment",
+      "date": "2025-10-20",
+      "location": "Eco Center, Dhaka",
+      "entry_fee": 350,
+      "description": "Bringing together experts on sustainable technologies and eco-friendly innovations."
+    }
+  ]
+  
