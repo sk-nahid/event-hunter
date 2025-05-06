@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link } from 'react-router';
+import { ApiContext } from '../Context/Context';
 
-const NavBar = ({navLinks}) => {
+const NavBar = ({ navLinks }) => {
+    const { userData, logOutUser } = use(ApiContext)
+    
+    const handleLogOut = () => {
+        logOutUser()
+            .then((res) => console.log(res))
+            .catch(error => console.log(error))
+    }
+
     return (
         <div className='bg-base-100 shadow-sm'>
         <div className="navbar lg:w-10/12 md:px-12 px-4 mx-auto ">
@@ -24,8 +33,12 @@ const NavBar = ({navLinks}) => {
                     {navLinks}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <Link to="/login" className="btn btn-primary">login</Link>
+                <div className="navbar-end">
+                    <p className='text-lg mr-4'>{userData&& userData.email}</p>
+                    {
+                        userData?<Link onClick={handleLogOut} className="btn btn-primary">Logout</Link>:<Link to="/login" className="btn btn-primary">login</Link>
+                    }
+                
             </div>
             </div>
             </div>

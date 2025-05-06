@@ -1,63 +1,62 @@
 [
-    {
-      "id": "event_001",
-      "name": "Tech Innovators Conference 2025",
-      "thumbnail": "https://i.ibb.co.com/h1BwgkBq/evangeline-shaw-nw-LTVwb7-Db-U-unsplash.jpg",
-      "category": "Technology",
-      "date": "2025-05-15",
-      "location": "Dhaka Convention Center, Dhaka",
-      "entry_fee": 500,
-      "description": "An exclusive gathering of tech leaders and innovators from around the globe."
-    },
-    {
-      "id": "event_002",
-      "name": "Future of Web Development Summit",
-      "thumbnail": "https://i.ibb.co.com/XfxWX5qC/headway-F2-KRf-Qf-Cqw-unsplash.jpg",
-      "category": "Web Development",
-      "date": "2025-06-10",
-      "location": "International Conference Center, Dhaka",
-      "entry_fee": 300,
-      "description": "Explore cutting-edge trends and tools shaping the future of web development."
-    },
-    {
-      "id": "event_003",
-      "name": "AI & Machine Learning Expo 2025",
-      "thumbnail": "https://i.ibb.co.com/TBSt7c01/herlambang-tinasih-gusti-r-TVN-Igb-C0o-unsplash.jpg",
-      "category": "Artificial Intelligence",
-      "date": "2025-07-01",
-      "location": "AI Research Lab, Dhaka",
-      "entry_fee": 750,
-      "description": "A showcase of AI breakthroughs, research, and industrial applications."
-    },
-    {
-      "id": "event_004",
-      "name": "Startup Dhaka 2025",
-      "thumbnail": "https://i.ibb.co.com/0VY7gWf1/jakob-dalbjorn-cu-KJre3ny-Yc-unsplash.jpg",
-      "category": "Entrepreneurship",
-      "date": "2025-08-12",
-      "location": "Startup Incubator Center, Dhaka",
-      "entry_fee": 200,
-      "description": "A platform for startups to pitch ideas and network with investors and mentors."
-    },
-    {
-      "id": "event_005",
-      "name": "Digital Security Forum",
-      "thumbnail": "https://i.ibb.co.com/N4nz8S7/m-accelerator-y-Tsy3-PYFPtc-unsplash.jpg",
-      "category": "Cybersecurity",
-      "date": "2025-09-05",
-      "location": "CyberTech Hall, Dhaka",
-      "entry_fee": 450,
-      "description": "An event focused on digital threats, secure systems, and the future of cybersecurity."
-    },
-    {
-      "id": "event_006",
-      "name": "Green Tech and Sustainability Conference",
-      "thumbnail": "https://i.ibb.co.com/8DB5H9VN/web-event.jpg",
-      "category": "Environment",
-      "date": "2025-10-20",
-      "location": "Eco Center, Dhaka",
-      "entry_fee": 350,
-      "description": "Bringing together experts on sustainable technologies and eco-friendly innovations."
-    }
-  ]
-  
+  {
+    "id": "event_001",
+    "name": "Tech Innovators Conference 2025",
+    "thumbnail": "https://i.ibb.co.com/h1BwgkBq/evangeline-shaw-nw-LTVwb7-Db-U-unsplash.jpg",
+    "category": "Technology",
+    "date": "2025-05-15",
+    "location": "Dhaka Convention Center, Dhaka",
+    "entry_fee": 500,
+    "description": "The Tech Innovators Conference 2025 is set to bring together some of the brightest minds in the technology industry under one roof. This exclusive event is designed for developers, entrepreneurs, product managers, and tech leaders to engage in deep discussions, share groundbreaking ideas, and unveil future-forward innovations. Attendees will have the opportunity to witness cutting-edge product launches, attend technical workshops, and network with peers and potential investors. With keynote speeches from global tech influencers and breakout sessions covering topics like AI, blockchain, cloud computing, and digital transformation, this conference promises to deliver immense value. Whether you are a seasoned professional or an emerging talent, this event offers a platform to connect, learn, and grow. The day will end with a networking dinner, where guests can unwind and explore collaboration opportunities. This event is not just a conference—it's a celebration of innovation, passion, and progress in the tech world. Participants are encouraged to bring their ideas, showcase their work, and actively engage with the community. Be part of shaping the future of technology at the Tech Innovators Conference 2025."
+  },
+  {
+    "id": "event_002",
+    "name": "Future of Web Development Summit",
+    "thumbnail": "https://i.ibb.co.com/XfxWX5qC/headway-F2-KRf-Qf-Cqw-unsplash.jpg",
+    "category": "Web Development",
+    "date": "2025-06-10",
+    "location": "Bangabandhu International Conference Center, Dhaka",
+    "entry_fee": 300,
+    "description": "The Future of Web Development Summit is a high-energy, knowledge-packed event that explores the trends, tools, and technologies redefining web development. With expert speakers from companies like Google, Mozilla, and Meta, this summit will tackle a range of subjects—from performance optimization and accessibility to the latest frameworks like React, Vue, and Svelte. Hands-on coding workshops will help attendees gain practical experience with modern stacks, CI/CD pipelines, Jamstack, and headless CMS solutions. Special sessions will also cover topics such as web security, PWA (Progressive Web Apps), SEO best practices, and WebAssembly. For developers looking to level up their skills and stay ahead in a fast-evolving industry, this is a must-attend event. The summit also includes a startup showcase, where web-based startups present innovative solutions, and a career zone with recruiters from leading tech firms. Participants will walk away with not just knowledge, but also inspiration and a fresh perspective on where web technology is heading. Whether you're a junior developer or a seasoned engineer, this event offers immense learning and networking potential in a collaborative environment designed to fuel your growth."
+  },
+  {
+    "id": "event_003",
+    "name": "AI & Machine Learning Expo 2025",
+    "thumbnail": "https://i.ibb.co.com/TBSt7c01/herlambang-tinasih-gusti-r-TVN-Igb-C0o-unsplash.jpg",
+    "category": "Artificial Intelligence",
+    "date": "2025-07-01",
+    "location": "AI Research Lab, Dhaka",
+    "entry_fee": 750,
+    "description": "AI & Machine Learning Expo 2025 is the premier gathering for professionals and researchers working in the field of artificial intelligence. The expo aims to showcase the latest advancements in AI and ML, including real-time demos of neural networks, deep learning models, generative AI tools, and natural language processing applications. Attendees will experience how AI is transforming industries such as healthcare, finance, education, and robotics. The event will feature keynote speeches from AI pioneers, including university researchers and AI lab executives, and will include technical workshops on training data, model tuning, and ethical AI deployment. This event is designed not only for tech experts but also for business leaders who want to understand how AI can be practically and responsibly adopted in their workflows. A unique panel discussion will address AI safety, regulation, and societal impact, offering a multi-dimensional view of this transformative technology. Students and young researchers will find opportunities to present their projects and gain feedback from professionals. Whether you’re building smart apps or shaping policy around AI use, this expo will provide the insights, connections, and tools needed to thrive in the AI-driven future."
+  },
+  {
+    "id": "event_004",
+    "name": "Startup Dhaka 2025",
+    "thumbnail": "https://i.ibb.co.com/0VY7gWf1/jakob-dalbjorn-cu-KJre3ny-Yc-unsplash.jpg",
+    "category": "Entrepreneurship",
+    "date": "2025-08-12",
+    "location": "Startup Incubator Center, Dhaka",
+    "entry_fee": 200,
+    "description": "Startup Dhaka 2025 is an electrifying one-day event tailored for founders, venture capitalists, and aspiring entrepreneurs who are shaping the future of innovation in Bangladesh and beyond. This platform celebrates the energy and creativity of the startup ecosystem, offering invaluable insights into funding strategies, product-market fit, team building, and scaling businesses. Keynotes from successful entrepreneurs, breakout sessions on startup law, and investor pitch competitions make this event a hotspot for entrepreneurial action. Whether you are looking to launch your first business, network with like-minded builders, or attract venture capital, Startup Dhaka is the place to be. There will also be hands-on mentoring sessions and live startup demo booths that allow real-time feedback from industry leaders. The atmosphere is collaborative, fast-paced, and energetic—perfect for people who thrive in creative environments. This year’s theme centers around “Innovation with Impact,” emphasizing sustainable and socially responsible entrepreneurship. If you’re ready to take your business idea to the next level or simply want to be inspired by visionary changemakers, this is an event you can’t afford to miss."
+  },
+  {
+    "id": "event_005",
+    "name": "Digital Security Forum",
+    "thumbnail": "https://i.ibb.co.com/N4nz8S7/m-accelerator-y-Tsy3-PYFPtc-unsplash.jpg",
+    "category": "Cybersecurity",
+    "date": "2025-09-05",
+    "location": "CyberTech Hall, Dhaka",
+    "entry_fee": 450,
+    "description": "The Digital Security Forum is Bangladesh’s largest cybersecurity event, designed to tackle emerging threats in the digital world. As cyberattacks become more sophisticated, this forum provides a vital platform for professionals to discuss real-world security challenges, showcase new defensive technologies, and build strategies for a safer digital future. The event will include training sessions on ethical hacking, secure coding practices, ransomware mitigation, and incident response planning. Representatives from government agencies, multinational corporations, and cybersecurity startups will share insights into threat intelligence, data privacy regulations, and zero-trust frameworks. One of the key highlights is a live Capture The Flag (CTF) competition where cybersecurity experts demonstrate their skills in a simulated environment. Panel discussions will also explore the role of AI in cybersecurity, balancing innovation with regulation, and the importance of public-private partnerships. With increasing risks in both personal and enterprise data security, this forum is a must-attend for IT professionals, policymakers, and anyone responsible for digital infrastructure. Participants will walk away empowered with tools, tactics, and knowledge to better protect their systems and networks."
+  },
+  {
+    "id": "event_006",
+    "name": "Green Tech and Sustainability Conference",
+    "thumbnail": "https://i.ibb.co.com/8DB5H9VN/web-event.jpg",
+    "category": "Environment",
+    "date": "2025-10-20",
+    "location": "Eco Center, Dhaka",
+    "entry_fee": 350,
+    "description": "The Green Tech and Sustainability Conference is the region’s foremost gathering of environmental scientists, clean tech entrepreneurs, and sustainability advocates. This conference addresses the urgent challenges of climate change and environmental degradation by showcasing innovative green technologies that promise a cleaner future. Topics will include renewable energy solutions, sustainable architecture, zero-waste manufacturing, smart agriculture, and carbon offsetting strategies. Attendees will hear from leaders in environmental policy, engineering, and business as they discuss how technology can help achieve sustainable development goals. Interactive booths will allow participants to experience solar panels, electric vehicles, and biodegradable packaging materials firsthand. Educational workshops on eco-entrepreneurship, climate finance, and ESG (Environmental, Social, Governance) reporting are tailored to both corporate and grassroots audiences. The conference also includes a green startup pitch competition and a tree-planting campaign. With a focus on practical innovation and community-driven impact, this event is ideal for forward-thinking individuals and organizations ready to make sustainability a core part of their mission. Whether you’re a student, policymaker, or startup founder, this conference offers inspiration, tools, and connections to make a difference."
+  }
+]

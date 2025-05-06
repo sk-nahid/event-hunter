@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const EventCard = ({ event }) => {
     
-    const {name,thumbnail,category,date,location,entry_fee}=event
+    const {id,name,thumbnail,category,date,location,entry_fee}=event
     return (
         <div className='md:p-8 p-2 bg-blue-100 rounded-md'>
             <div>
@@ -18,7 +19,7 @@ const EventCard = ({ event }) => {
                 <p className='text-lg'>Entry Fee: <span className='text-secondary font-semibold'>{ entry_fee} Taka only</span> </p>
             </div>
             <div>
-                <button className='btn btn-secondary w-full'>View More</button>
+                <Link to={`/event-details/${id}`} className='btn btn-secondary w-full'>View More</Link >
             </div>
         </div>
     );

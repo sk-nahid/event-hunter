@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router";
 import Root from "../pages/Root";
 import Home from "../pages/Home";
 import EventDetails from "../Components/EventDetails";
+import Login from "../Components/Login";
+import Register from "../Components/Register";
 
 
 export const router = createBrowserRouter([
@@ -14,8 +16,16 @@ export const router = createBrowserRouter([
                 Component: Home
             },
             {
-                path: "/event-details",
+                path: "/event-details/:id",
                 Component: EventDetails,
+            },
+            {
+                path: "/login",
+                Component:Login,
+            },
+            {
+                path: "/register",
+                Component: Register,
             }
         ]
     },

@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from '../Components/NavBar';
 import Home from './Home';
 import Footer from '../Components/Footer';
-import { NavLink } from 'react-router';
+import { NavLink, Outlet } from 'react-router';
 
 const Root = () => {
 
@@ -17,7 +17,7 @@ const Root = () => {
                 <NavBar navLinks={navLinks}></NavBar>
             </header>
             <main>
-                <Home></Home>
+                <Outlet></Outlet>
             </main>
             <footer>
                 <Footer></Footer>
