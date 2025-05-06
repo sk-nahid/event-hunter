@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import EventDetails from "../Components/EventDetails";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
+import PrivateRoute from "../Components/PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -17,7 +18,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/event-details/:id",
-                Component: EventDetails,
+                element: <PrivateRoute><EventDetails></EventDetails></PrivateRoute>
             },
             {
                 path: "/login",

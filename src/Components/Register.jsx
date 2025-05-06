@@ -2,10 +2,15 @@ import React, { use, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router';
 import { ApiContext } from '../Context/Context';
+import { GoogleAuthProvider } from 'firebase/auth';
+import { signInWithPopup } from 'firebase/auth';
+import { auth } from '../firebase/firebase.config';
 
 const Register = () => {
 
-    const { createUser,userData, setUserData } = use(ApiContext);
+    const { createUser, setUserData, updateUser, googleSingUp } = use(ApiContext);
+    
+    const provider= new GoogleAuthProvider()
 
     //states
     
@@ -29,19 +34,30 @@ const Register = () => {
         //register user
         createUser(email, password)
             .then(res => {
+
+                updateUser({ displayName: name, photoURL: photo })
+                    .then(res => {
+                        console.log(res)
+                        setUserData({...res.user,displayName: name, photoURL: photo })
+                    })
+                    .catch(error => {
+                        console.log(error)
+                        setUserData(res.user)
+                    })
                 console.log(res.user)
                 setUserData(res.user)
             })
         .catch(error=> console.log(error))
-        
-            
-        
-        
-
-        
-
         console.log(name, photo, email, password)
         
+    }
+    const handleGoogleSingUp = () => {
+        googleSingUp()
+            .then(res => {
+                console.log(res.user)
+            })
+            .catch(error => console.log(error))
+        console.log(auth, provider)
     }
 
     return (
@@ -59,13 +75,13 @@ const Register = () => {
                                 <input type="password" name='password' className="input" placeholder="Password" />
         
                                 <button className="btn btn-primary mt-4">Sing Up</button>
-                                <button className="btn text-white border-[#e5e5e5] btn-secondary shadow-md ">
+                    </form>
+                    <button onClick={handleGoogleSingUp} className="btn text-white border-[#e5e5e5] btn-secondary shadow-md ">
                                     <FaGoogle></FaGoogle>
                                     Sing Up with Google
-                                </button>
-                        <div><p className="text-lg">Already have account <Link to="/register" className='text-secondary'>Login</Link></p></div>
+                    </button>
+                    <div><p className="text-lg">Already have account <Link to="/register" className='text-secondary'>Login</Link></p></div>
                         <p className='text-lg text-red-500'>{ error&& `error: ${error}` }</p>
-                            </form>
                         </div>
                     </div>
                 </div>

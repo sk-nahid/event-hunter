@@ -1,11 +1,15 @@
 import React, { use } from 'react';
 import { FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { ApiContext } from '../Context/Context';
 
 const Login = () => {
 
-    const {loginUser,setUserData} = use(ApiContext)
+    const { loginUser, setUserData,googleSingUp } = use(ApiContext)
+
+    const location = useLocation();
+    const navigate = useNavigate()
+
     const handleLogin = (e) => {
         e.preventDefault()
         const email = e.target.email.value;
@@ -16,8 +20,22 @@ const Login = () => {
             .then(res => {
                 console.log(res.user)
                 setUserData(res.user)
+                navigate(`${location.state ? location.state : "/"}`)
             })
-        .catch(error=> console.log(error))
+            .catch(error => console.log(error))
+
+
+
+    }
+    const handleGoogleLogin = () => {
+
+        googleSingUp()
+            .then(res => {
+                console.log(res.user)
+                navigate(`${location.state ? location.state : "/"}`)
+            })
+            .catch(error => console.log(error))
+        console.log(auth, provider)
 
     }
     return (
@@ -31,12 +49,13 @@ const Login = () => {
                         <input type="password" name='password' className="input" placeholder="Password" />
 
                         <button className="btn btn-primary mt-4">Login</button>
-                        <button className="btn text-white border-[#e5e5e5] btn-secondary shadow-md ">
-                            <FaGoogle></FaGoogle>
-                            Login with Google
-                        </button>
-                        <div><p className="text-lg">Don't have account! <Link to="/register" className='text-secondary'>register</Link></p></div>
+
                     </form>
+                    <button onClick={handleGoogleLogin} className="btn text-white border-[#e5e5e5] btn-secondary shadow-md ">
+                        <FaGoogle></FaGoogle>
+                        Login with Google
+                    </button>
+                    <div><p className="text-lg">Don't have account! <Link to="/register" className='text-secondary'>register</Link></p></div>
                 </div>
             </div>
         </div>
