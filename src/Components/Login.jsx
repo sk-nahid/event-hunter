@@ -1,11 +1,14 @@
-import React, { use } from 'react';
-import { FaGoogle } from 'react-icons/fa';
+import React, { use, useState } from 'react';
+import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { ApiContext } from '../Context/Context';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
-    const { loginUser, setUserData,googleSingUp } = use(ApiContext)
+    const { loginUser, setUserData, googleSingUp } = use(ApiContext);
+    const [clicked, setClicked] = useState(false)
 
     const location = useLocation();
     const navigate = useNavigate()
@@ -22,7 +25,10 @@ const Login = () => {
                 setUserData(res.user)
                 navigate(`${location.state ? location.state : "/"}`)
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                toast.error(error.message)
+                console.log(error)
+            })
 
 
 
@@ -34,10 +40,17 @@ const Login = () => {
                 console.log(res.user)
                 navigate(`${location.state ? location.state : "/"}`)
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                toast.error(error.message)
+                console.log(error)
+            })
         console.log(auth, provider)
 
     }
+    const handleClicked = () => {
+        setClicked(!clicked)
+    }
+ console.log(clicked)
     return (
         <div className='w-screen h-screen flex justify-center items-center'>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -46,7 +59,12 @@ const Login = () => {
                         <label className="label text-lg">Email</label>
                         <input type="email" name='email' className="input" placeholder="Email" />
                         <label className="label text-lg">Password</label>
-                        <input type="password" name='password' className="input" placeholder="Password" />
+                        <div className='relative'>
+                            <input type={clicked?"text":"password"} name='password' className="input z-0" placeholder="Password" />
+                            
+                            <p>{ clicked?<FaEyeSlash className='absolute top-2 right-6' size={20} onClick={handleClicked}></FaEyeSlash>: <FaEye className='absolute z-10 top-2 right-6' size={20} onClick={handleClicked}></FaEye>}</p>
+                        </div>
+
 
                         <button className="btn btn-primary mt-4">Login</button>
 
@@ -58,6 +76,7 @@ const Login = () => {
                     <div><p className="text-lg">Don't have account! <Link to="/register" className='text-secondary'>register</Link></p></div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

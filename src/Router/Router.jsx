@@ -5,6 +5,7 @@ import EventDetails from "../Components/EventDetails";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
 import PrivateRoute from "../Components/PrivateRoute";
+import Error from "../pages/Error";
 
 
 export const router = createBrowserRouter([
@@ -32,5 +33,9 @@ export const router = createBrowserRouter([
     },
     {
         path: '/about',
+    },
+    {
+        path: "/*",
+        Component: Error,
     }
 ])

@@ -37,7 +37,7 @@ console.log(userData)
                     <p className='text-lg mr-4'>{userData && userData.displayName}</p>
                     
                     {
-                        userData?.photoURL&&<img className="w-[100px] h-[100px] object-cover object-center rounded-full mx-4" src={`${userData.photoURL}`} alt="" />
+                        userData?.photoURL&&<div className="tooltip tooltip-bottom" data-tip={userData.displayName}><img className="w-[100px] h-[100px] object-cover object-center rounded-full mx-4" src={`${userData.photoURL}`} alt="" /> </div>
                     }
                     {
                         userData ? <Link onClick={handleLogOut} className="btn btn-primary">Logout</Link> : <Link to="/login" className="btn btn-primary">login</Link>

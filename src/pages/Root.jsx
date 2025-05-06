@@ -20,7 +20,7 @@ const Root = () => {
                 <Outlet></Outlet>
             </main>
             <footer>
-                <Footer></Footer>
+                <Footer navLinks={navLinks}></Footer>
             </footer>
 
 

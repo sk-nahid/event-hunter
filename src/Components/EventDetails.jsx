@@ -1,9 +1,10 @@
-import React, { use, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { ApiContext } from '../Context/Context';
 import { useParams } from 'react-router';
 import Loading from './Loading';
 
 const EventDetails = () => {
+
     const [success,setSuccess]= useState(false)
     const { eventData, loading, setLoading } = use(ApiContext);
     const { id } = useParams()
@@ -25,6 +26,9 @@ const EventDetails = () => {
         }
 
     }
+    useEffect(() => {
+       document.title = `${id} || event` ;
+    },[])
 console.log(success)
     return (
         <div className='lg:w-10/12 mx-auto md:grid grid-cols-12 gap-4 mt-8'>
