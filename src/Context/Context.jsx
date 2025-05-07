@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged,signOut, updateProfile, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged,signOut, updateProfile, signInWithPopup, GoogleAuthProvider, sendPasswordResetEmail } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import { auth } from '../firebase/firebase.config';
 
@@ -24,6 +24,11 @@ const ContextProvider = ({children}) => {
     }
     const updateUser = (updatedData) => {
         return updateProfile(auth.currentUser,updatedData)
+    }
+    const resetPassword = (email) => {
+        console.log(email)
+        return sendPasswordResetEmail(auth, email)
+        
     }
 
     //google sing in
@@ -64,7 +69,8 @@ const ContextProvider = ({children}) => {
         loginUser,
         logOutUser,
         updateUser,
-        googleSingUp
+        googleSingUp,
+        resetPassword
     }
 
     return <ApiContext value={ApiData}>{ children}</ApiContext>

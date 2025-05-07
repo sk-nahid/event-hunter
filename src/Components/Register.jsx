@@ -39,7 +39,7 @@ const Register = () => {
             .then(res => {
 
                 updateUser({ displayName: name, photoURL: photo })
-                    .then(res => {
+                    .then(() => {
                         console.log(res)
                         setUserData({ ...res.user, displayName: name, photoURL: photo })
                     })
@@ -97,7 +97,7 @@ const Register = () => {
                         <FaGoogle></FaGoogle>
                         Sing Up with Google
                     </button>
-                    <div><p className="text-lg">Already have account <Link to="/register" className='text-secondary'>Login</Link></p></div>
+                    <div><p className="text-lg">Already have account <Link to="/login" className='text-secondary'>Login</Link></p></div>
                     <p className='text-lg text-red-500'>{error && `error: ${error}`}</p>
                 </div>
             </div>

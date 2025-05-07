@@ -9,13 +9,20 @@ const Login = () => {
 
     const { loginUser, setUserData, googleSingUp } = use(ApiContext);
     const [clicked, setClicked] = useState(false)
+    const [email, setEmail]= useState('')
 
     const location = useLocation();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    
+
+    const handleResetNavigate = () => {
+        navigate(`/reset?email=${email}`)
+    }
 
     const handleLogin = (e) => {
         e.preventDefault()
         const email = e.target.email.value;
+        setEmail(email)
         const password = e.target.password.value;
         console.log(email, password)
 
@@ -69,11 +76,14 @@ const Login = () => {
                         <button className="btn btn-primary mt-4">Login</button>
 
                     </form>
+
                     <button onClick={handleGoogleLogin} className="btn text-white border-[#e5e5e5] btn-secondary shadow-md ">
                         <FaGoogle></FaGoogle>
                         Login with Google
                     </button>
+                    <div><p className="text-lg">Forget your password? <a onClick={handleResetNavigate} className='text-secondary link'>Reset Password</a></p></div>
                     <div><p className="text-lg">Don't have account! <Link to="/register" className='text-secondary'>register</Link></p></div>
+
                 </div>
             </div>
             <ToastContainer></ToastContainer>
