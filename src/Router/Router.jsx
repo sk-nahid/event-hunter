@@ -6,6 +6,7 @@ import Login from "../Components/Login";
 import Register from "../Components/Register";
 import PrivateRoute from "../Components/PrivateRoute";
 import Error from "../pages/Error";
+import Profile from "../pages/Profile";
 
 
 export const router = createBrowserRouter([
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
             {
                 path: "/register",
                 Component: Register,
+            },
+            {
+                path: "/profile",
+                Component: Profile,
             }
         ]
     },
