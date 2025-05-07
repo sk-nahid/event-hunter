@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, Links } from 'react-router';
 import { ApiContext } from '../Context/Context';
 
 const NavBar = ({ navLinks }) => {
@@ -26,7 +26,7 @@ console.log(userData)
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Event Hunter BD</a>
+                    <Link to='/' className="btn btn-ghost text-xl">Event Hunter BD</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 ">
@@ -34,10 +34,10 @@ console.log(userData)
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <p className='text-lg mr-4'>{userData && userData.displayName}</p>
+                    
                     
                     {
-                        userData?.photoURL&&<div className="tooltip tooltip-left" data-tip={userData.displayName}><img className="w-[100px] h-[100px] object-cover object-center rounded-full mx-4" src={`${userData.photoURL}`} alt="" /> </div>
+                        userData?.photoURL&&<div className="tooltip tooltip-left" data-tip={userData.displayName}><img className="md:w-[80px] w-[50px] md:h-[80px] h-[50px] object-cover object-center rounded-full mx-4" src={`${userData.photoURL}`} alt="" /> </div>
                     }
                     {
                         userData ? <Link onClick={handleLogOut} className="btn btn-primary">Logout</Link> : <Link to="/login" className="btn btn-primary">login</Link>

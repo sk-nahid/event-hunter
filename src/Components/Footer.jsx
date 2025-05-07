@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Footer = ({navLinks}) => {
     return (
-        <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+        <footer className="footer footer-horizontal footer-center bg-blue-100 text-base-content rounded p-10">
         <ul className="grid grid-flow-col gap-4">
           {navLinks}
           <Link className="text-lg font-semibold mx-2" >Privacy policy</Link>
