@@ -26,7 +26,7 @@ console.log(userData)
                             {navLinks}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost text-xl">Event Hunter BD</Link>
+                    <Link to='/' className="link w-[180px]"><img src="https://i.ibb.co.com/ZpXn2gTb/logobig.png" alt="" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 ">

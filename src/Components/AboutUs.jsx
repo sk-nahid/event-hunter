@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const AboutUs = () => {
     return (
@@ -19,9 +20,9 @@ const AboutUs = () => {
 
                         
                     </p>
-                    <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                    <Link to="/about" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
                         Learn More
-                    </button>
+                    </Link>
                 </div>
             </section>
         </div>

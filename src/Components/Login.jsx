@@ -1,6 +1,6 @@
 import React, { use, useState } from 'react';
 import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
-import { Link, useLocation, useNavigate } from 'react-router';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router';
 import { ApiContext } from '../Context/Context';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,7 +14,9 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
     
-
+    const handleRegisterPage = () => {
+        navigate("/register",{state:location.state})
+    }
     const handleResetNavigate = () => {
         navigate(`/reset?email=${email}`)
     }
@@ -82,7 +84,7 @@ const Login = () => {
                         Login with Google
                     </button>
                     <div><p className="text-lg">Forget your password? <a onClick={handleResetNavigate} className='text-secondary link'>Reset Password</a></p></div>
-                    <div><p className="text-lg">Don't have account! <Link to="/register" className='text-secondary'>register</Link></p></div>
+                    <div><p className="text-lg">Don't have account! <button onClick={handleRegisterPage} className='text-secondary link'>register</button></p></div>
 
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React, { use, useState } from 'react';
 import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router';
 import { ApiContext } from '../Context/Context';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { signInWithPopup } from 'firebase/auth';
@@ -9,7 +9,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-    const [clicked, setClicked]= useState(false)
+    const [clicked, setClicked] = useState(false)
+    const navigate = useNavigate()
+    const location = useLocation()
+    console.log(location)
 
     const { createUser, setUserData, updateUser, googleSingUp } = use(ApiContext);
 
@@ -30,17 +33,18 @@ const Register = () => {
         const validPassword = /^(?=.*[a-z])(?=.*[A-Z])[A-Za-z\d]{6,}$/;
         setError('')
         if (!validPassword.test(password)) {
-            setError('use Upercase lowar case and a digit for validation')
+            toast.error("Password error: please use minimum a uppercase , lowercase, and a digit for password validation")
             return
         }
 
         //register user
         createUser(email, password)
             .then(res => {
-
+                
                 updateUser({ displayName: name, photoURL: photo })
                     .then(() => {
                         console.log(res)
+                        
                         setUserData({ ...res.user, displayName: name, photoURL: photo })
                     })
                     .catch(error => {
@@ -48,6 +52,7 @@ const Register = () => {
                         toast.error(error.message)
                         setUserData(res.user)
                     })
+                navigate(`${location.state ? location.state : "/"}`)
                 console.log(res.user)
                 setUserData(res.user)
             })
@@ -61,6 +66,7 @@ const Register = () => {
     const handleGoogleSingUp = () => {
         googleSingUp()
             .then(res => {
+                navigate(`${location.state ? location.state : "/"}`)
                 console.log(res.user)
             })
             .catch(error => {

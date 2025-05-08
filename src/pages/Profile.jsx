@@ -41,7 +41,7 @@ const Profile = () => {
 
     return (
         <div className='w-10/12 mx-auto md:grid grid-cols-2'>
-            <div className='text-center my-8 border-r-2'>
+            <div className='text-center my-8 border-b-2 pb-4 md:border-b-0 md:border-r-2'>
                 <div className='my-12 '>
                     <h1 className='md:text-4xl text-2xl font-bold text-center my-2'>My Profile</h1>
 
