@@ -1,12 +1,28 @@
-# React + Vite
+# Event Hunter BD 
+A modern event management and discovery platform built with React.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Purpose
+- stay connected with the community.
+- build a smart and skilled generation.
 
-Currently, two official plugins are available:
+## Features
+- Responsive landing page with image slider
+- Upcoming events section
+- Login/Register functionality
+- Navigation with React Router
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# npm packages
+- firebase
+- react
+- react-dom
+- react-icons
+- react-router
+- react-toastify
+- swiper
+- tailwindcss
 
-## Expanding the ESLint configuration
+## Live Link
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Visit website [Live Link](https://eventhunterbd.netlify.app/).
+
+
