@@ -11,7 +11,7 @@ const ContextProvider = ({children}) => {
     const [userData, setUserData] = useState(null);
     
     
-    console.log(userData)
+    
 
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password )
@@ -26,7 +26,7 @@ const ContextProvider = ({children}) => {
         return updateProfile(auth.currentUser,updatedData)
     }
     const resetPassword = (email) => {
-        console.log(email)
+        
         return sendPasswordResetEmail(auth, email)
         
     }

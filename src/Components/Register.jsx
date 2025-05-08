@@ -12,7 +12,7 @@ const Register = () => {
     const [clicked, setClicked] = useState(false)
     const navigate = useNavigate()
     const location = useLocation()
-    console.log(location)
+    
 
     const { createUser, setUserData, updateUser, googleSingUp } = use(ApiContext);
 
@@ -43,7 +43,7 @@ const Register = () => {
                 
                 updateUser({ displayName: name, photoURL: photo })
                     .then(() => {
-                        console.log(res)
+                        
                         
                         setUserData({ ...res.user, displayName: name, photoURL: photo })
                     })
@@ -53,27 +53,27 @@ const Register = () => {
                         setUserData(res.user)
                     })
                 navigate(`${location.state ? location.state : "/"}`)
-                console.log(res.user)
+                
                 setUserData(res.user)
             })
             .catch(error => {
                 toast.error(error.message)
                 console.log(error)
             })
-        console.log(name, photo, email, password)
+        
 
     }
     const handleGoogleSingUp = () => {
         googleSingUp()
             .then(res => {
                 navigate(`${location.state ? location.state : "/"}`)
-                console.log(res.user)
+                
             })
             .catch(error => {
                 toast.error(error.message)
                 console.log(error)
             })
-        console.log(auth, provider)
+        
     }
     const handleClicked = () => {
         setClicked(!clicked)

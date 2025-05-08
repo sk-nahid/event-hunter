@@ -8,7 +8,7 @@ const ResetPassword = () => {
     const { resetPassword } = use(ApiContext)
     const [searchParams] = useSearchParams();
     const email = searchParams.get("email")
-    console.log(email)
+    
     const handleReset = (e) => {
         e.preventDefault()
         const email = e.target.email.value

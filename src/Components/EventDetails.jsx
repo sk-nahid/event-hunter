@@ -8,7 +8,6 @@ const EventDetails = () => {
     const [success,setSuccess]= useState(false)
     const { eventData, loading, setLoading } = use(ApiContext);
     const { id } = useParams()
-    console.log(eventData, id)
     const singleData = eventData.find(data => data.id == id);
     if (loading) {
         return <Loading></Loading>
@@ -20,7 +19,7 @@ const EventDetails = () => {
         e.preventDefault();
         const name = e.target.name.value;
         const email = e.target.email.value;
-        console.log(name, email)
+        
         if (name && email) {
             setSuccess(true)
         }
@@ -29,7 +28,7 @@ const EventDetails = () => {
     useEffect(() => {
        document.title = `${id} || event` ;
     },[])
-console.log(success)
+
     return (
         <div className='lg:w-10/12 mx-auto md:grid grid-cols-12 gap-4 mt-8'>
             <div className='p-4 bg-yellow-100 col-span-8'>

@@ -26,17 +26,18 @@ const Login = () => {
         const email = e.target.email.value;
         setEmail(email)
         const password = e.target.password.value;
-        console.log(email, password)
+        
 
         loginUser(email, password)
             .then(res => {
-                console.log(res.user)
+                
                 setUserData(res.user)
+                toast.success('Login Successful')
                 navigate(`${location.state ? location.state : "/"}`)
             })
             .catch(error => {
                 toast.error(error.message)
-                console.log(error)
+                
             })
 
 
@@ -46,20 +47,19 @@ const Login = () => {
 
         googleSingUp()
             .then(res => {
-                console.log(res.user)
+                
                 navigate(`${location.state ? location.state : "/"}`)
             })
             .catch(error => {
                 toast.error(error.message)
                 console.log(error)
             })
-        console.log(auth, provider)
+        
 
     }
     const handleClicked = () => {
         setClicked(!clicked)
     }
- console.log(clicked)
     return (
         <div className='w-screen h-screen flex justify-center items-center'>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -88,7 +88,7 @@ const Login = () => {
 
                 </div>
             </div>
-            <ToastContainer></ToastContainer>
+            
         </div>
     );
 };

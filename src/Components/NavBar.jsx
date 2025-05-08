@@ -7,10 +7,12 @@ const NavBar = ({ navLinks }) => {
 
     const handleLogOut = () => {
         logOutUser()
-            .then((res) => console.log(res))
+            .then((res) => {
+                
+            })
             .catch(error => console.log(error))
     }
-console.log(userData)
+
     return (
         <div className='bg-base-100 shadow-sm'>
             <div className="navbar lg:w-10/12 md:px-12 px-4 mx-auto ">

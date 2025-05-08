@@ -24,7 +24,7 @@ const Profile = () => {
 
         updateUser({ displayName: name, photoURL: photo })
             .then(() => {
-                console.log("update profile")
+                
                 
             })
             .catch(error => {
@@ -69,7 +69,7 @@ const Profile = () => {
 
 
                     </div>
-                    <ToastContainer></ToastContainer>
+                    
                 </div>
 
             </div>

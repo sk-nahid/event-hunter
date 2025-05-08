@@ -9,7 +9,7 @@ const Event = () => {
     
     const {eventData}= use(ApiContext)
 
-    console.log(eventData)
+    
     return (
         <div className='lg:w-10/12 md:px-12 px-4 mx-auto my-8'>
             <div className='my-12'>
