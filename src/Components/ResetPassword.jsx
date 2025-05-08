@@ -1,6 +1,6 @@
 import React, { use } from 'react';
 import { FaGoogle } from 'react-icons/fa';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import { ApiContext } from '../Context/Context';
 import { Navigate, useSearchParams } from 'react-router';
 
@@ -14,6 +14,7 @@ const ResetPassword = () => {
         const email = e.target.email.value
         resetPassword(email)
             .then(() => {
+                toast.success('Reset Email sent!! please check your mail')
                 window.open("https://mail.google.com/", "_blank");
 
 
