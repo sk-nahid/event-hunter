@@ -48,5 +48,4 @@ In a fast-paced world, staying informed about community events and opportunities
 
 ---
 
-## 📂 Folder Structure (Optional)
 
